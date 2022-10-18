@@ -8,11 +8,18 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
   color: var(--prime-color);
   letter-spacing: 0.03em;
 
   background-color: var(--primary-white-color);
+}
+
+/* Generic class selectors */
+.list {
+  list-style: none;
+}
+.no-underlining {
+  text-decoration: none;
 }
 
 /* Logo */
@@ -22,7 +29,6 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
 }
 .logo > span {
   color: var(--accent-color);
@@ -48,10 +54,6 @@ body {
   color: var(--accent-color);
 }
 
-.list {
-  list-style: none;
-}
-
 /* Hero */
 .hero {
   background-color: var(--background-black-color);
@@ -66,6 +68,27 @@ body {
   text-transform: uppercase;
 }
 
+/* Sections */
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.section-title.hidden {
+  display: none;
+}
+
+/* Advantages */
+.advantages-title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.advantages-text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
 /* Button */
 .btn {
   background-color: var(--accent-color);
@@ -75,4 +98,6 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
 }
