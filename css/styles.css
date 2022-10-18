@@ -1,0 +1,51 @@
+:root {
+  --prime-color: #212121;
+  --secondary-color: #757575;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--prime-color);
+  letter-spacing: 0.03em;
+
+  background-color: var(--primary-white-color);
+}
+
+/* Logo */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  color: var(--prime-color);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.logo > span {
+  color: var(--accent-color);
+}
+
+/* Site nav and contact in the header */
+.site-nav .link,
+.header-link {
+  color: var(--prime-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.site-nav .link:hover,
+.site-nav .link:focus,
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.list {
+  list-style: none;
+}
