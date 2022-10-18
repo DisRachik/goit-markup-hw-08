@@ -103,6 +103,23 @@ body {
   line-height: 1.19;
 }
 
+/* Footer */
+.site-footer {
+  background-color: var(--background-black-color);
+}
+.site-footer > .logo {
+  color: var(--primary-white-color);
+}
+.address-items a {
+  color: var(--primary-white-color);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.address-items .address-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* Button */
 .btn {
   background-color: var(--accent-color);
