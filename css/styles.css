@@ -4,12 +4,13 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --background-black-color: #2f303a;
+  --background-gray-color: #F5F4FA;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--prime-color);
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
 
   background-color: var(--primary-white-color);
 }
@@ -18,17 +19,15 @@ body {
 .list {
   list-style: none;
 }
-.no-underlining {
-  text-decoration: none;
-}
 
 /* Logo */
 .logo {
   font-family: 'Raleway', sans-serif;
-  color: var(--prime-color);
+  color: currentColor;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+  text-decoration: none;
 }
 .logo > span {
   color: var(--accent-color);
@@ -37,11 +36,11 @@ body {
 /* Site nav and contact in the header */
 .site-nav .link,
 .header-link {
-  color: var(--prime-color);
+  color: currentColor;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   text-decoration: none;
 }
 .site-nav .link:hover,
@@ -64,7 +63,7 @@ body {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: .06em;
   text-transform: uppercase;
 }
 
@@ -115,20 +114,56 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  text-decoration: none;
+}
+.address-items a:hover,
+.address-items a:focus {
+  color: var(--accent-color);
 }
 .address-items .address-link {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, .6);
+}
+
+/* Portfolio */
+.portfolio-item > a {
+  text-decoration: none;
+  color: currentColor;
+  cursor: inherit;
+}
+.portfolio-item-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: .06em;
+}
+.portfolio-item-subtitle {
+  color: var(--secondary-color);
+  line-height: 1.88;
 }
 
 /* Button */
-.btn {
+.hero-btn {
   background-color: var(--accent-color);
 
   color: var(--primary-white-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.06em;
+  letter-spacing: .06em;
 
   cursor: pointer;
+}
+
+.btn {
+  font: inherit;
+  background-color: var(--background-gray-color);
+  color: currentColor;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: inherit;
+
+  cursor: pointer;
+}
+.btn:hover, btn:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
