@@ -4,13 +4,14 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --background-black-color: #2f303a;
-  --background-gray-color: #F5F4FA;
+  --background-gray-color: #f5f4fa;
+  --hero-btn-hover: #188ce8;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--prime-color);
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
 
   background-color: var(--primary-white-color);
 }
@@ -40,7 +41,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 .site-nav .link:hover,
@@ -56,14 +57,14 @@ body {
 /* Hero */
 .hero {
   background-color: var(--background-black-color);
+  text-align: center;
 }
 .hero-title {
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -92,6 +93,9 @@ body {
 /* Work */
 
 /* Team */
+.section-team {
+  background-color: var(--background-gray-color);
+}
 .team-item > .person {
   font-weight: 500;
   font-size: 16px;
@@ -121,7 +125,7 @@ body {
   color: var(--accent-color);
 }
 .address-items .address-link {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Portfolio */
@@ -133,7 +137,7 @@ body {
 .portfolio-item-title {
   font-size: 18px;
   line-height: 2;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 }
 .portfolio-item-subtitle {
   color: var(--secondary-color);
@@ -148,9 +152,13 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 
   cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--hero-btn-hover);
 }
 
 .btn {
@@ -163,7 +171,8 @@ body {
 
   cursor: pointer;
 }
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
