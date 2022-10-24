@@ -8,10 +8,29 @@
   --hero-btn-hover: #188ce8;
 }
 
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--prime-color);
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
 
   background-color: var(--primary-white-color);
 }
@@ -23,6 +42,26 @@ body {
 .no-underlining {
   color: currentColor;
   text-decoration: none;
+}
+
+/* Container" */
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  outline: 1px solid orangered;
+}
+
+/* Header */
+header {
+  border-bottom: 1px solid #ECECEC;;
+}
+.header-wrap {
+  display: flex;
+  align-items: center;
 }
 
 /* Logo */
@@ -41,12 +80,27 @@ body {
 }
 
 /* Site nav and contact in the header */
+.nav {
+  margin-left: 93px;
+}
+.site-nav {
+  display: flex;
+}
+.nav-item:not(:first-child),
+.contact-item:not(:first-child) {
+  margin-left: 50px;
+}
+.nav-link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 .site-nav .nav-link,
 .header-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: .02em;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
 }
 .site-nav .nav-link:hover,
 .site-nav .nav-link:focus,
@@ -57,18 +111,24 @@ body {
 .site-nav .nav-link.current {
   color: var(--accent-color);
 }
+.contact-items {
+  display: flex;
+  margin-left: auto;
+}
 
 /* Hero */
-.hero {
+.section.hero {
   background-color: var(--background-black-color);
   text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
+  
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -114,18 +174,18 @@ body {
 .site-footer {
   background-color: var(--background-black-color);
 }
-.address-items a {
+.address-item > a {
   color: var(--primary-white-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
-.address-items a:hover,
-.address-items a:focus {
+.address-item > a:hover,
+.address-item > a:focus {
   color: var(--accent-color);
 }
-.address-items .address-link {
-  color: rgba(255, 255, 255, .6);
+.address-item > .address-link {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Portfolio */
@@ -135,7 +195,7 @@ body {
 .portfolio-item-title {
   font-size: 18px;
   line-height: 2;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 }
 .portfolio-item-subtitle {
   color: var(--secondary-color);
@@ -150,7 +210,7 @@ body {
   font: inherit;
   font-weight: 700;
   line-height: 1.88;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 
   cursor: pointer;
 }
