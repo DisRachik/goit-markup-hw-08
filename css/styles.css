@@ -213,9 +213,9 @@ header {
   border-radius: 0px 0px 4px 4px;
 }
 .team-item > img {
-width: 100%;
-height: auto;
-margin-bottom: 30px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
 }
 .team-item > .person {
   margin-bottom: 10px;
@@ -231,7 +231,16 @@ margin-bottom: 30px;
 
 /* Footer */
 .site-footer {
+  padding: 60px 0;
+
   background-color: var(--background-black-color);
+}
+.site-footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .address-item > a {
   color: var(--primary-white-color);
