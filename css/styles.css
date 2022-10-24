@@ -11,7 +11,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--prime-color);
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
 
   background-color: var(--primary-white-color);
 }
@@ -20,37 +20,41 @@ body {
 .list {
   list-style: none;
 }
+.no-underlining {
+  color: currentColor;
+  text-decoration: none;
+}
 
 /* Logo */
 .logo {
   font-family: 'Raleway', sans-serif;
-  color: currentColor;
+  color: var(--accent-color);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
 }
-.logo > span {
-  color: var(--accent-color);
+.logo-header {
+  color: var(--prime-color);
+}
+.logo-footer {
+  color: var(--primary-white-color);
 }
 
 /* Site nav and contact in the header */
-.site-nav .link,
+.site-nav .nav-link,
 .header-link {
-  color: currentColor;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
+  letter-spacing: .02em;
 }
-.site-nav .link:hover,
-.site-nav .link:focus,
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus,
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
 }
-.site-nav .link.current {
+.site-nav .nav-link.current {
   color: var(--accent-color);
 }
 
@@ -64,7 +68,7 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  letter-spacing: 0.06em;
+  letter-spacing: .06em;
   text-transform: uppercase;
 }
 
@@ -110,34 +114,28 @@ body {
 .site-footer {
   background-color: var(--background-black-color);
 }
-.site-footer > .logo {
-  color: var(--primary-white-color);
-}
 .address-items a {
   color: var(--primary-white-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  text-decoration: none;
 }
 .address-items a:hover,
 .address-items a:focus {
   color: var(--accent-color);
 }
 .address-items .address-link {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, .6);
 }
 
 /* Portfolio */
 .portfolio-item > a {
-  text-decoration: none;
-  color: currentColor;
   cursor: inherit;
 }
 .portfolio-item-title {
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: .06em;
 }
 .portfolio-item-subtitle {
   color: var(--secondary-color);
@@ -149,10 +147,10 @@ body {
   background-color: var(--accent-color);
 
   color: var(--primary-white-color);
+  font: inherit;
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.06em;
+  letter-spacing: .06em;
 
   cursor: pointer;
 }
@@ -162,9 +160,10 @@ body {
 }
 
 .btn {
-  font: inherit;
   background-color: var(--background-gray-color);
+
   color: currentColor;
+  font: inherit;
   font-weight: 500;
   line-height: 1.62;
   letter-spacing: inherit;
