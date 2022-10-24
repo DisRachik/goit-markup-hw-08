@@ -55,8 +55,6 @@ body {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  /* !Прибрати */
-  outline: 1px solid orangered;
 }
 
 /* Header */
@@ -140,8 +138,6 @@ header {
 /* Sections */
 .section {
   padding: 94px 0;
-  /* !Прибрати */
-  outline: 1px solid greenyellow;
 }
 .section.narrow {
   padding-bottom: 0;
