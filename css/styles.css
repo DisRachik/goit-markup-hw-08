@@ -7,6 +7,10 @@
   --background-gray-color: #f5f4fa;
   --hero-btn-hover: #188ce8;
 }
+/* half the distance between Flexbox grid elements */
+:root {
+  --half-margin: 15px;
+}
 
 h1,
 h2,
@@ -157,11 +161,11 @@ header {
 .advantages-list {
   display: flex;
   justify-content: center;
-  margin: 0 -15px;
+  margin: 0 calc(-1 * var(--half-margin));
 }
 .advantages-item {
-  flex-basis: calc((100% - (3 * 15px)) / 4);
-  margin: 0 15px;
+  flex-basis: calc((100% - (3 * var(--half-margin))) / 4);
+  margin: 0 var(--half-margin);
 }
 .advantages-title {
   margin-bottom: 10px;
@@ -179,7 +183,11 @@ header {
 /* Work */
 .work-list {
   display: flex;
-  column-gap: 30px;
+  margin: 0 calc(-1 * var(--half-margin));
+}
+.work-item {
+  flex-basis: calc((100% - (2 * var(--half-margin))) / 3);
+  margin: 0 var(--half-margin);
 }
 .work-item > img {
   width: 100%;
@@ -190,7 +198,28 @@ header {
 .section-team {
   background-color: var(--background-gray-color);
 }
+.team-list {
+  display: flex;
+  margin: 0 calc(-1 * var(--half-margin));
+}
+.team-item {
+  flex-basis: calc((100% - (3 * var(--half-margin))) / 4);
+  margin: 0 var(--half-margin);
+  padding-bottom: 30px;
+
+  text-align: center;
+
+  background-color: var(--primary-white-color);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-item > img {
+width: 100%;
+height: auto;
+margin-bottom: 30px;
+}
 .team-item > .person {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
