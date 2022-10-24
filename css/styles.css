@@ -51,13 +51,13 @@ body {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-
+  /* !Прибрати */
   outline: 1px solid orangered;
 }
 
 /* Header */
 header {
-  border-bottom: 1px solid #ECECEC;;
+  border-bottom: 1px solid #ececec;
 }
 .header-wrap {
   display: flex;
@@ -118,12 +118,13 @@ header {
 
 /* Hero */
 .section.hero {
-  background-color: var(--background-black-color);
   text-align: center;
+
+  background-color: var(--background-black-color);
 }
 .hero-title {
   margin-bottom: 30px;
-  
+
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
@@ -133,6 +134,14 @@ header {
 }
 
 /* Sections */
+.section {
+  padding: 94px 0;
+  /* !Прибрати */
+  outline: 1px solid greenyellow;
+}
+.section.narrow {
+  padding-bottom: 0;
+}
 .section-title {
   font-size: 36px;
   line-height: 1.17;
@@ -143,7 +152,18 @@ header {
 }
 
 /* Advantages */
+.advantages-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 -15px;
+}
+.advantages-item {
+  flex-basis: calc((100% - (3 * 15px)) / 4);
+  margin: 0 15px;
+}
 .advantages-title {
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -204,13 +224,17 @@ header {
 
 /* Button */
 .hero-btn {
-  background-color: var(--accent-color);
+  padding: 10px 32px;
 
   color: var(--primary-white-color);
   font: inherit;
   font-weight: 700;
-  line-height: 1.88;
+  line-height: 1.875;
   letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
 
   cursor: pointer;
 }
@@ -220,18 +244,18 @@ header {
 }
 
 .btn {
-  background-color: var(--background-gray-color);
-
   color: currentColor;
   font: inherit;
   font-weight: 500;
   line-height: 1.62;
   letter-spacing: inherit;
 
+  background-color: var(--background-gray-color);
+
   cursor: pointer;
 }
 .btn:hover,
 .btn:focus {
-  background-color: var(--accent-color);
   color: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
