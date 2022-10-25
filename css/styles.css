@@ -1,3 +1,4 @@
+/* Variables for color */
 :root {
   --prime-color: #212121;
   --secondary-color: #757575;
@@ -14,7 +15,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -22,10 +24,6 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-}
-p {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 img {
   display: block;
@@ -119,12 +117,17 @@ header {
 }
 
 /* Hero */
-.section.hero {
+.hero {
+  padding-top: 200px;
+  padding-bottom: 280px;
   text-align: center;
 
   background-color: var(--background-black-color);
 }
 .hero-title {
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
 
   color: var(--primary-white-color);
@@ -253,6 +256,7 @@ header {
 }
 
 /* Portfolio */
+/* List of section filters (buttons) */
 .btn-list {
   display: flex;
   justify-content: center;
@@ -262,6 +266,7 @@ header {
   margin-left: 8px;
 }
 
+/* Gallery of works */
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -316,6 +321,7 @@ header {
 }
 
 .btn {
+  min-width: 73px;
   padding: 6px 22px;
 
   color: currentColor;
@@ -329,10 +335,6 @@ header {
   border-radius: 4px;
 
   cursor: pointer;
-}
-.btn-item:first-child > .btn {
-  padding-right: 25px;
-  padding-left: 25px;
 }
 .btn:hover,
 .btn:focus {
