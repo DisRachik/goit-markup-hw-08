@@ -86,8 +86,7 @@ header {
 .site-nav {
   display: flex;
 }
-.nav-item:not(:first-child),
-.contact-item:not(:first-child) {
+.nav-item:not(:first-child) {
   margin-left: 50px;
 }
 .nav-link {
@@ -113,7 +112,18 @@ header {
 }
 .contact-items {
   display: flex;
+  gap: 30px;
   margin-left: auto;
+
+  color: var(--secondary-color);
+}
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-link__icon {
+  fill: currentColor;
 }
 
 /* Hero */
