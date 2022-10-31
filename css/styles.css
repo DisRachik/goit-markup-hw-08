@@ -268,33 +268,6 @@ header {
   line-height: 1.19;
 }
 
-/* Social networks */
-.social-list {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 32px;
-  padding-left: 32px;
-}
-.social-item__link {
-  display: flex;
-  width: 44px;
-  height: 44px;
-
-  color: var(--icon-color);
-
-  border-radius: 50%;
-}
-.social-item__link:hover,
-.social-item__link:focus {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-}
-.social-item__icon {
-  margin: auto;
-
-  fill: currentColor;
-}
-
 /* Customers */
 .customers-list {
   display: flex;
@@ -327,12 +300,17 @@ header {
 }
 
 /* Footer */
-.site-footer {
+.footer {
   padding: 60px 0;
 
+  color: var(--primary-white-color);
   background-color: var(--background-footer-color);
 }
-.site-footer .logo {
+.footer-container{
+  display: flex;
+  gap: 70px;
+}
+.footer .logo {
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -340,7 +318,6 @@ header {
   margin-bottom: 9px;
 }
 .address-item > a {
-  color: var(--primary-white-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -351,6 +328,25 @@ header {
 }
 .address-item > .address-link {
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* Footer social */
+.footer .social-wrap {
+  padding-top: 12px;
+}
+.footer-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.43;
+  text-transform: uppercase;
+}
+.footer .social-list {
+  gap: 10px;
+  padding: 0;
+}
+.footer .social-item__link {
+  color: currentColor;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Portfolio */
@@ -438,4 +434,31 @@ header {
 .btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+}
+
+/* Social networks */
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.social-item__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+
+  color: var(--icon-color);
+
+  border-radius: 50%;
+}
+.social-item__link:hover,
+.social-item__link:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+.social-item__icon {
+  margin: auto;
+
+  fill: currentColor;
 }
