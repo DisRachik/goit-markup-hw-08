@@ -131,13 +131,16 @@ header {
   background-color: var(--background-reserve-color);
 }
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 200px 0;
   text-align: center;
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/bg-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .hero-title {
   width: 696px;
@@ -287,7 +290,7 @@ header {
   border-radius: 4px;
 }
 .customers-item__link:hover,
-.costomers-item__link:focus {
+.customers-item__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
