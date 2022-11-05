@@ -108,7 +108,21 @@ header {
   color: var(--accent-color);
 }
 .site-nav .nav-link.current {
+  position: relative;
   color: var(--accent-color);
+}
+.site-nav .nav-link.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 .contact-items {
   display: flex;
@@ -127,20 +141,18 @@ header {
 }
 
 /* Hero */
-.hero-overlay {
-  background-color: var(--background-reserve-color);
-}
 .hero {
   max-width: 1600px;
   margin: 0 auto;
   padding: 200px 0;
   text-align: center;
 
+  background-color: var(--background-reserve-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/bg-hero.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   width: 696px;

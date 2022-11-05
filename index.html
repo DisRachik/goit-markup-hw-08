@@ -23,6 +23,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
     <header>
       <div class="container header-wrap">
@@ -46,18 +47,24 @@
         <ul class="contact-items list">
           <li class="contact-item">
             <a class="header-link no-underlining" href="mailto:info@devstudio.com"
-              ><svg class="header-link__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use></svg
-              >info@devstudio.com</a
-            >
+              ><svg class="header-link__icon" width="16" height="12" aria-label="іконка конверту">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
           <li class="contact-item">
             <a class="header-link no-underlining" href="tel:+380961111111">
-              <svg class="header-link__icon" width="10" height="16">
+              <svg
+                class="header-link__icon"
+                width="10"
+                height="16"
+                aria-label="іконка сотового телефону"
+              >
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
-              +38 096 111 11 11</a
-            >
+              +38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
@@ -65,14 +72,12 @@
 
     <main>
       <!-- The Hero section is a presentation of the web studio -->
-      <div class="hero-overlay">
-        <section class="hero">
-          <div class="container">
-            <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="hero-btn" type="button">Замовити послугу</button>
-          </div>
-        </section>
-      </div>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+          <button class="hero-btn" type="button">Замовити послугу</button>
+        </div>
+      </section>
 
       <!-- Advantage section -->
       <section class="section narrow">
@@ -80,7 +85,7 @@
           <h2 class="section-title visually-hidden">Наші переваги</h2>
           <ul class="advantages-list list">
             <li class="advantages-item">
-              <div class="advantages-icon-wrap">
+              <div class="advantages-icon-wrap" aria-label="Іконка супутникової антени">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#antenna"></use>
                 </svg>
@@ -92,7 +97,7 @@
             </li>
 
             <li class="advantages-item">
-              <div class="advantages-icon-wrap">
+              <div class="advantages-icon-wrap" aria-label="іконка циферблату годинника">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#clock"></use>
                 </svg>
@@ -104,7 +109,7 @@
             </li>
 
             <li class="advantages-item">
-              <div class="advantages-icon-wrap">
+              <div class="advantages-icon-wrap" aria-label="іконка діаграми на комп'ютері">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#diagram"></use>
                 </svg>
@@ -115,7 +120,7 @@
               </p>
             </li>
 
-            <li class="advantages-item">
+            <li class="advantages-item" aria-label="іконка астронавта біля зірки">
               <div class="advantages-icon-wrap">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#astronaut"></use>
@@ -186,6 +191,7 @@
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="instagram"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#instagram"></use>
@@ -199,6 +205,7 @@
                     href="https://twitter.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="twitter"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#twitter"></use>
@@ -212,6 +219,7 @@
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="facebook"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#facebook"></use>
@@ -225,6 +233,7 @@
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="linkedin"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#linkedin"></use>
@@ -250,6 +259,7 @@
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="instagram"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#instagram"></use>
@@ -263,6 +273,7 @@
                     href="https://twitter.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="twitter"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#twitter"></use>
@@ -276,6 +287,7 @@
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="facebook"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#facebook"></use>
@@ -289,6 +301,7 @@
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="linkedin"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#linkedin"></use>
@@ -314,6 +327,7 @@
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="instagram"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#instagram"></use>
@@ -327,6 +341,7 @@
                     href="https://twitter.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="twitter"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#twitter"></use>
@@ -340,6 +355,7 @@
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="facebook"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#facebook"></use>
@@ -353,6 +369,7 @@
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="linkedin"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#linkedin"></use>
@@ -378,6 +395,7 @@
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="instagram"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#instagram"></use>
@@ -391,6 +409,7 @@
                     href="https://twitter.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="twitter"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#twitter"></use>
@@ -404,6 +423,7 @@
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="facebook"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#facebook"></use>
@@ -417,6 +437,7 @@
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noopener  nofollow  noreferrer"
+                    aria-label="linkedin"
                   >
                     <svg class="social-item__icon" width="20" height="20">
                       <use href="./images/icons.svg#linkedin"></use>
@@ -434,7 +455,7 @@
         <div class="container">
           <h2 class="section-title">Постійні клієнти</h2>
           <ul class="customers-list list">
-            <li class="customers-item">
+            <li class="customers-item" aria-label="логотип компанії клієнта">
               <a
                 class="customers-item__link no-underlining"
                 href="#"
@@ -447,7 +468,7 @@
               </a>
             </li>
 
-            <li class="customers-item">
+            <li class="customers-item" aria-label="логотип компанії клієнта">
               <a
                 class="customers-item__link no-underlining"
                 href="#"
@@ -460,7 +481,7 @@
               </a>
             </li>
 
-            <li class="customers-item">
+            <li class="customers-item" aria-label="логотип компанії клієнта">
               <a
                 class="customers-item__link no-underlining"
                 href="#"
@@ -473,7 +494,7 @@
               </a>
             </li>
 
-            <li class="customers-item">
+            <li class="customers-item" aria-label="логотип компанії клієнта">
               <a
                 class="customers-item__link no-underlining"
                 href="#"
@@ -486,7 +507,7 @@
               </a>
             </li>
 
-            <li class="customers-item">
+            <li class="customers-item" aria-label="логотип компанії клієнта">
               <a
                 class="customers-item__link no-underlining"
                 href="#"
@@ -499,7 +520,7 @@
               </a>
             </li>
 
-            <li class="customers-item">
+            <li class="customers-item" aria-label="логотип компанії клієнта">
               <a
                 class="customers-item__link no-underlining"
                 href="#"
@@ -550,6 +571,7 @@
           </address>
         </div>
 
+        <!-- Social links -->
         <div class="social-wrap">
           <h2 class="footer-title">приєднуйтесь</h2>
           <ul class="social-list list">
@@ -559,6 +581,7 @@
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener  nofollow  noreferrer"
+                aria-label="instagram"
               >
                 <svg class="social-item__icon" width="20" height="20">
                   <use href="./images/icons.svg#instagram"></use>
@@ -572,6 +595,7 @@
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener  nofollow  noreferrer"
+                aria-label="twitter"
               >
                 <svg class="social-item__icon" width="20" height="20">
                   <use href="./images/icons.svg#twitter"></use>
@@ -585,6 +609,7 @@
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener  nofollow  noreferrer"
+                aria-label="facebook"
               >
                 <svg class="social-item__icon" width="20" height="20">
                   <use href="./images/icons.svg#facebook"></use>
@@ -598,6 +623,7 @@
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener  nofollow  noreferrer"
+                aria-label="linkedin"
               >
                 <svg class="social-item__icon" width="20" height="20">
                   <use href="./images/icons.svg#linkedin"></use>
@@ -608,5 +634,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Connecting Js for the modal window -->
+    <script src="./js/modal.js" type="module"></script>
   </body>
 </html>
