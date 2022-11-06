@@ -392,7 +392,48 @@ header {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Feedback form (modal) */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--animation-time) var(--animation-function-time),
+    visibility var(--animation-time) var(--animation-function-time);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden > .modal {
+  transform: scale(0.5, 0.5);
+}
+
+.modal {
+  position: relative;
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: scale(1, 1);
+  transition: transform var(--animation-time) var(--animation-function-time);
+}
+
 /* Portfolio */
+
 /* List of section filters (buttons) */
 .btn-list {
   display: flex;
@@ -476,6 +517,8 @@ header {
 }
 
 /* Button */
+
+/* Hero section button */
 .hero-btn {
   padding: 10px 32px;
 
@@ -498,6 +541,30 @@ header {
   background-color: var(--hero-btn-hover);
 }
 
+/* Modal button */
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  background-color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+.close-icon {
+  margin: auto;
+
+  fill: currentColor;
+}
+
+/* Buttons on the Portfolio page */
 .btn {
   min-width: 73px;
   padding: 6px 22px;
