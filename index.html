@@ -742,12 +742,15 @@
             </li>
           </ul>
 
-          <label>
-            <input type="checkbox" />
-            <p>
+          <label class="consent">
+            <input class="consent-check" type="checkbox" name="agreement" required />
+            <svg class="consent-icon" width="16" height="15">
+              <use href="./images/icons.svg#check"></use>
+            </svg>
+            <span class="consent-text">
               Погоджуюся з розсилкою та приймаю
-              <a href="#">Умови договору</a>
-            </p>
+              <a class="consent-text__link" href="#">Умови договору</a>
+            </span>
           </label>
           <button class="btn" type="submit">Відправити</button>
         </form>

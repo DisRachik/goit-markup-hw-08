@@ -431,7 +431,7 @@ header {
   box-shadow: 3px 3px 20px var(--accent-color);
 }
 
-/* Feedback form (modal) */
+/* backdrop */
 .backdrop {
   position: fixed;
   top: 0;
@@ -457,11 +457,11 @@ header {
   transform: scale(0.5, 0.5);
 }
 
+/* Feedback form (modal) */
 .modal {
   position: relative;
 
   width: 528px;
-  height: 581px;
   padding: 40px;
 
   background-color: var(--primary-white-color);
@@ -544,6 +544,49 @@ header {
 }
 .modal-form__text:focus + .label-icon {
   fill: var(--accent-color);
+}
+
+/* Feedback form (checkbox) */
+.consent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+.consent-check {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.consent-icon {
+  fill: rgba(0, 0, 0, 0);
+
+  border: 2px solid var(--prime-color);
+  border-radius: 2px;
+
+  transition-property: fill, background-color, border;
+  transition-duration: var(--animation-time);
+  transition-timing-function: var(--animation-function-time);
+}
+.consent-check:focus + .consent-icon {
+  border-color: var(--accent-color);
+}
+.consent-check:checked + .consent-icon {
+  fill: var(--primary-white-color);
+  stroke: var(--primary-white-color);
+
+  background-color: var(--accent-color);
+  border: none;
+}
+.consent-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-color);
+}
+.consent-text__link {
+  color: var(--accent-color);
 }
 
 /* Portfolio */
@@ -667,6 +710,11 @@ header {
   fill: currentColor;
 }
 
+.modal .btn {
+  padding-right: 52px;
+  padding-left: 52px;
+}
+
 /* Modal button */
 .modal-close-btn {
   position: absolute;
@@ -685,7 +733,8 @@ header {
   cursor: pointer;
   transition: color var(--animation-time) var(--animation-function-time);
 }
-.modal-close-btn:hover, .modal-close-btn:focus {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   color: var(--accent-color);
 }
 .close-icon {
