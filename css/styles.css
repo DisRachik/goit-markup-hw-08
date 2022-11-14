@@ -486,7 +486,7 @@ header {
   margin-bottom: 20px;
   text-align: left;
 }
-.modal-form__item:not(:last-child) {
+.modal-form__label:not(:last-child) {
   margin-bottom: 10px;
 }
 .modal-form__label {
@@ -516,7 +516,7 @@ header {
 .modal-form__text::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form__item:last-child .modal-form__text {
+.modal-form__label:last-child .modal-form__text {
   height: 120px;
   padding: 12px 16px;
 
