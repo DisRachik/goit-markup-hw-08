@@ -1,5 +1,5 @@
 // Parameters for the font
- @mixin fontProportions($size, $height, $spacing:0.03em) {
+ @mixin fontProportions($size, $height, $spacing: 0.03em) {
   font-size: $size;
   line-height: $height;
   letter-spacing: $spacing;

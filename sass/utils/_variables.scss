@@ -1,4 +1,4 @@
-// Color map
+/* Color map */
 $colors: (
   'text-prime': #212121,
   'text-secondary': #757575,
@@ -12,7 +12,34 @@ $colors: (
 
   'btn-hover': #188ce8,
   'brand-icon': #afb1b8,
+
+  'header-border': #ececec,
+  'logo-secondary': #000000,
 );
 @function getColor($key) {
   @return map-get($colors, $key);
+}
+
+/* Button styles */
+%btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  color: getColor(light);
+
+  background-color: getColor(accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  @include animated(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: getColor('btn-hover');
+  }
 }
