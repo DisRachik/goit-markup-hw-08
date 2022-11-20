@@ -1,8 +1,7 @@
 .socials-list {
   display: flex;
-  justify-content: space-between;
-
-  outline: 1px solid blue;
+  justify-content: center;
+  gap: 10px;
 
   &--narrow {
     padding-right: 32px;
@@ -26,6 +25,10 @@
   &:focus {
     color: getColor('light');
     background-color: getColor('accent');
+  }
+
+  &--bg-dark {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 

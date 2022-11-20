@@ -15,6 +15,7 @@ $colors: (
 
   'header-border': #ececec,
   'logo-secondary': #000000,
+  'field-error': #ff0000,
 );
 @function getColor($key) {
   @return map-get($colors, $key);
