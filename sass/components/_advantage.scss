@@ -1,5 +1,5 @@
 .advantages-card {
-  flex-basis: calc(100% / 3 - #{$flexItemsLine});
+  flex-basis: calc((100% - (#{$flexItemsLine} * 3)) / 4);
 }
 
 .advantages-card__wrap {

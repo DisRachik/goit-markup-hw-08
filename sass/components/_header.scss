@@ -30,7 +30,8 @@
 
   @include animated(color);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: getColor('accent');
   }
 
@@ -73,4 +74,3 @@
 .header-contact__icon {
   fill: currentColor;
 }
-

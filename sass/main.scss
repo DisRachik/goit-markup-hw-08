@@ -1,14 +1,27 @@
+// Initial styles
 @import './base/reset';
 @import './utils/mixin';
 @import './utils/variables';
 @import './base/base';
+
+// Repeating blocks
 @import './components/header';
 @import './components/logo';
-@import './components/hero';
+@import './components/footer';
 @import './components/section';
+@import './components/social-list';
+
+// Main page
+@import './components/hero';
 @import './components/advantage';
 @import './components/work';
 @import './components/team';
-@import './components/social-list';
 @import './components/customer';
-@import './components/footer';
+
+// Portfolio page
+@import './components/portfolio-page/filter';
+@import './components/portfolio-page/portfolio';
+
+// Modal window
+@import './components/modal';
+

@@ -1,0 +1,195 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  $value-list: opacity, visibility;
+  @include animated($value-list);
+
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    & .modal {
+      transform: scale(0.5, 0.5);
+    }
+  }
+}
+
+.modal {
+  position: relative;
+
+  max-width: 528px;
+  padding: 40px 39px 40px 41px;
+
+  text-align: center;
+
+  background-color: getColor('light');
+
+  @include animated(transform);
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  @include fontProportions(20px, 1.15);
+}
+
+// Close modal button
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  background-color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  @include animated(color);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.modal__icon {
+  margin: auto;
+
+  fill: currentColor;
+}
+
+// Modal window form
+.modal-form__wrap {
+  margin-bottom: 20px;
+
+  @include fontProportions(12px, 1.167, 0.01em);
+  text-align: left;
+}
+
+.modal-form__label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:last-child .modal-form__field-text {
+    height: 120px;
+    padding: 12px 16px;
+
+    resize: none;
+  }
+}
+
+.modal-form__field-name {
+  margin-bottom: 4px;
+}
+
+.modal-form__field-text {
+  height: 40px;
+  padding: 12px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include animated(border-color);
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    border-color: getColor(accent);
+
+    & + .modal-form__icon {
+      fill: getColor(accent);
+    }
+  }
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  @include animated(fill);
+}
+
+// Feedback form (checkbox)
+.modal-form__consent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 21px;
+  padding-left: 17px;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.modal-form__check {
+  appearance: none;
+  position: absolute;
+
+  &:focus + .modal-form__icon-check {
+    border-color: getColor('accent');
+  }
+
+  &:checked + .modal-form__icon-check {
+    fill: getColor('light');
+    stroke: getColor('light');
+
+    background-color: getColor('accent');
+    border: none;
+  }
+}
+
+.modal-form__icon-check {
+  fill: rgba(0, 0, 0, 0);
+
+  border: 2px solid getColor('text-prime');
+  border-radius: 2px;
+
+  $value-list: fill, background-color, border;
+  @include animated($value-list);
+}
+
+.modal-form__text {
+  @include fontProportions(14px, 1.71);
+
+  color: getColor('text-secondary');
+}
+
+.modal-form__link {
+  display: inline-block;
+  margin-left: 3px;
+
+  text-decoration: underline;
+  color: getColor('accent');
+}
+
+.modal-form__btn {
+  @extend %btn;
+
+  padding-right: 52px;
+  padding-left: 52px;
+}

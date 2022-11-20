@@ -1,5 +1,5 @@
 .work-card {
-  flex-basis: calc(100% / 2 - #{$flexItemsLine});
+  flex-basis: calc((100% - (#{$flexItemsLine} * 2)) / 3);
 }
 
 .work-card__wrap {
