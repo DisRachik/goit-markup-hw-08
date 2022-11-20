@@ -1,0 +1,26 @@
+.advantages-card {
+  flex-basis: calc(100% / 3 - #{$flexItemsLine});
+}
+
+.advantages-card__wrap {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 30px;
+  padding: 25px;
+
+  background-color: getColor('bg-secondary');
+  border-radius: 4px;
+}
+
+.advantages-card__title {
+  margin-bottom: 10px;
+
+  @include fontProportions(14px, 1.14);
+  text-transform: uppercase;
+}
+.advantages-card__text {
+  @include fontProportions(14px, 1.71);
+
+  color: getColor('text-secondary');
+}

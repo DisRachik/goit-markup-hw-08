@@ -1,0 +1,24 @@
+.work-card {
+  flex-basis: calc(100% / 2 - #{$flexItemsLine});
+}
+
+.work-card__wrap {
+  position: relative;
+}
+
+.work-card__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  @include fontProportions(14px, 1.43);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: getColor('light');
+  background-color: rgba(47, 48, 58, 0.8);
+}

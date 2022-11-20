@@ -1,0 +1,29 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &--narrow {
+    padding-bottom: 0;
+  }
+
+  &--select {
+    background-color: getColor('bg-secondary');
+  }
+}
+
+.section__title {
+  margin-bottom: 50px;
+
+  @include fontProportions(36px, 1.17);
+  text-align: center;
+
+  &--hidden {
+    @extend %visually-hidden;
+  }
+}
+
+.section__items {
+  display: flex;
+  justify-content: center;
+  gap: $flexItemsLine;
+}

@@ -1,4 +1,4 @@
-/* Color map */
+// Color map
 $colors: (
   'text-prime': #212121,
   'text-secondary': #757575,
@@ -20,7 +20,10 @@ $colors: (
   @return map-get($colors, $key);
 }
 
-/* Button styles */
+// Indentation between cards in sections
+$flexItemsLine: 30px;
+
+// Button styles
 %btn {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -42,4 +45,19 @@ $colors: (
   &:focus {
     background-color: getColor('btn-hover');
   }
+}
+
+// Visually-hidden
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

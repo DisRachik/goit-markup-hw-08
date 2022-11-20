@@ -1,0 +1,36 @@
+.socials-list {
+  display: flex;
+  justify-content: space-between;
+
+  outline: 1px solid blue;
+
+  &--narrow {
+    padding-right: 32px;
+    padding-left: 32px;
+
+    color: getColor('brand-icon');
+  }
+}
+
+.socials-list__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  $value-list: color, background-color;
+  @include animated($value-list);
+
+  &:hover,
+  &:focus {
+    color: getColor('light');
+    background-color: getColor('accent');
+  }
+}
+
+.socials-list__icon {
+  margin: auto;
+
+  fill: currentColor;
+}

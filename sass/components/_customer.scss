@@ -1,0 +1,30 @@
+.customer-card {
+  flex-basis: calc(100% / 5 - #{$flexItemsLine});
+}
+
+.customer-card__link {
+  display: flex;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  color: getColor('brand-icon');
+
+  border: 1px solid getColor('brand-icon');
+  border-radius: 4px;
+
+  $value-list: color, border-color;
+  @include animated($value-list);
+
+  &:hover,
+  &:link {
+    color: getColor('accent');
+    border-color: getColor('accent');
+  }
+}
+
+.customer-card__icon {
+  margin: auto;
+
+  fill: currentColor;
+}

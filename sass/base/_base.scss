@@ -3,18 +3,17 @@ body {
   color: getColor('text-prime');
 
   background-color: getColor('light');
-}
 
-.section {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  scroll-behavior: smooth;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
 
   padding-right: 15px;
   padding-left: 15px;
+
+  outline:1px solid tomato;
 }
