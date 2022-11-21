@@ -17,7 +17,7 @@
   @include animated($value-list);
 
   &:hover,
-  &:link {
+  &:focus {
     color: getColor('accent');
     border-color: getColor('accent');
   }

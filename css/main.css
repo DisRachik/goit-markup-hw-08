@@ -529,7 +529,7 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer-card__link:hover, .customer-card__link:link {
+.customer-card__link:hover, .customer-card__link:focus {
   color: #2196f3;
   border-color: #2196f3;
 }
