@@ -1,9 +1,13 @@
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  @include fontProportions(26px, 1.2);
+  @include fontProportions(24px, 1.67);
 
   color: currentColor;
+
+  @include media('desktop') {
+    @include fontProportions(26px, 1.2);
+  }
 }
 .logo-highlighting {
   color: getColor('accent');

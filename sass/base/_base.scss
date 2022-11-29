@@ -8,10 +8,22 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-
   padding-right: 15px;
   padding-left: 15px;
+
+  outline: 1px solid tomato;
+
+  @include media('phone') {
+    width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include min-max('tablet', 'desktop') {
+    width: 768px;
+  }
+
+  @include media('desktop') {
+    width: 1200px;
+  }
 }
