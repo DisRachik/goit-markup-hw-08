@@ -82,7 +82,7 @@
           aria-controls="mobile-menu"
           aria-expanded="false"
         >
-          <svg class="menu-toggle__open" width="40" height="40">
+          <svg class="menu-toggle__icon" width="40" height="40">
             <use href="./images/icons.svg#burger-menu"></use>
           </svg>
         </button>
@@ -788,84 +788,96 @@
 
     <!-- Mobile menu -->
     <div class="mobile-menu js-menu-container" id="mobile-menu">
-      <!-- Button close for mobile menu -->
-      <button
-        class="menu-toggle js-close-menu"
-        type="button"
-        aria-label="Закрити меню на мобільному"
-      >
-        <svg class="menu-toggle__close" width="40" height="40">
-          <use href="./images/icons.svg#close-burger-menu"></use>
-        </svg>
-      </button>
-
-      <!-- Navigation -->
-      <nav class="nav">
-        <ul class="nav__items">
-          <li class="nav__item"><a class="nav__link nav__link--current" href="#">Студія</a></li>
-          <li class="nav__item">
-            <a class="nav__link" href="./portfolio.html">Портфоліо</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="#address">Контакти</a></li>
-        </ul>
-      </nav>
-
-      <!-- Contacts in mobile menu -->
-      <ul class="mobile-menu__items">
-        <li class="mobile-menu__item">
-          <a href="tel:+380961111111" class="mobile-menu__contacts">+38 096 111 11 11</a>
-        </li>
-        <li class="mobile-menu__item">
-          <a href="mailto:info@devstudio.com" class="mobile-menu__contacts">info@devstudio.com</a>
-        </li>
-      </ul>
-
-      <!-- Socials links in mobile menu -->
-      <ul class="mobile-menu__socials-list">
-        <li class="mobile-menu__socials-item">
-          <a
-            class="mobile-menu__socials-link"
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener  nofollow  noreferrer"
+      <div class="container mobile-menu__container">
+        <div>
+          <!-- Button close for mobile menu -->
+          <button
+            class="menu-toggle js-close-menu"
+            type="button"
+            aria-label="Закрити меню на мобільному"
           >
-            Instagram
-          </a>
-        </li>
+            <svg class="menu-toggle__icon" width="40" height="40">
+              <use href="./images/icons.svg#close-burger-menu"></use>
+            </svg>
+          </button>
 
-        <li class="mobile-menu__socials-item">
-          <a
-            class="mobile-menu__socials-link"
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener  nofollow  noreferrer"
-          >
-            Twitter
-          </a>
-        </li>
+          <!-- Navigation in mobile menu -->
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__nav-items">
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link mobile-menu__nav-link--current" href="#">Студія</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link" href="#address">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-        <li class="mobile-menu__socials-item">
-          <a
-            class="mobile-menu__socials-link"
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener  nofollow  noreferrer"
-          >
-            Facebook
-          </a>
-        </li>
+        <div>
+          <!-- Contacts in mobile menu -->
+          <ul class="mobile-menu__items">
+            <li class="mobile-menu__item">
+              <a href="tel:+380961111111" class="mobile-menu__contacts">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="mailto:info@devstudio.com" class="mobile-menu__contacts"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
 
-        <li class="mobile-menu__socials-item">
-          <a
-            class="mobile-menu__socials-link"
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener  nofollow  noreferrer"
-          >
-            LinkedIn
-          </a>
-        </li>
-      </ul>
+          <!-- Socials links in mobile menu -->
+          <ul class="mobile-menu__socials-list">
+            <li class="mobile-menu__socials-item">
+              <a
+                class="mobile-menu__socials-link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener  nofollow  noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
+
+            <li class="mobile-menu__socials-item">
+              <a
+                class="mobile-menu__socials-link"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener  nofollow  noreferrer"
+              >
+                Twitter
+              </a>
+            </li>
+
+            <li class="mobile-menu__socials-item">
+              <a
+                class="mobile-menu__socials-link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener  nofollow  noreferrer"
+              >
+                Facebook
+              </a>
+            </li>
+
+            <li class="mobile-menu__socials-item">
+              <a
+                class="mobile-menu__socials-link"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener  nofollow  noreferrer"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Connecting Js -->

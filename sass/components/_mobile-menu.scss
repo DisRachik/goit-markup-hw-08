@@ -1,4 +1,118 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  width: 100vw;
+  height: 100vh;
+
+  font-weight: 500;
+
+  background-color: getColor('light');
+
+  transform: translateX(100%);
+  @include animated(transform);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+// Button for mobile menu
 .menu-toggle {
-  display: block;
+  display: flex;
+  width: 40px;
+  height: 40px;
   margin-left: auto;
+
+  background-color: inherit;
+
+  @include animated(color);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+
+  @include media('tablet') {
+    display: none;
+  }
+}
+.menu-toggle__icon {
+  margin: auto;
+
+  fill: currentColor;
+}
+
+// Navigation in mobile menu
+.mobile-menu__nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__nav-link {
+  @include fontProportions(40px, 1.175, 0.02em);
+
+  @include animated(color);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+
+  &--current {
+    color: getColor('accent');
+  }
+}
+
+// Contacts in mobile menu
+.mobile-menu__items {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__item {
+  &:first-child {
+    margin-bottom: 32px;
+
+    @include fontProportions(34px, 1.176, 0.02em);
+
+    color: getColor('accent');
+  }
+
+  &:last-child {
+    @include fontProportions(24px, 1.176, 0.02em);
+
+    color: getColor('text-secondary');
+  }
+}
+
+// Socials links in mobile menu
+.mobile-menu__socials-list {
+  display: flex;
+}
+
+.mobile-menu__socials-item {
+  padding-right: 10px;
+
+  &:not(:first-child) {
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+    padding-left: 10px;
+  }
+}
+
+.mobile-menu__socials-link {
+  @include fontProportions(18px, 1.22, 0.02em);
+
+  color: getColor('accent');
 }

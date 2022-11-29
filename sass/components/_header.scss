@@ -18,6 +18,10 @@
 
   @include media('tablet') {
     display: block;
+    margin-left: 88px;
+  }
+
+  @include media('desktop') {
     margin-left: 93px;
   }
 }
@@ -67,18 +71,32 @@
 
   @include media('tablet') {
     display: flex;
-    gap: 30px;
     margin-left: auto;
 
     color: getColor('text-secondary');
   }
+
+  @include min-max('tablet', 'desktop') {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @include media('desktop') {
+    gap: 40px;
+  }
 }
+
 .header-contact__link {
   @extend .nav__link;
+  padding: 0;
 
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @include media('desktop', max) {
+    @include fontProportions(12px, 1.67, 0.02em);
+  }
 }
 .header-contact__icon {
   fill: currentColor;
