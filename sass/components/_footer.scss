@@ -6,18 +6,44 @@
   background-color: getColor('bg-dark');
 
   &__container {
-    display: flex;
-    gap: 70px;
+    @include media('desktop', max) {
+      text-align: center;
+    }
+    @include media('tablet') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include media('desktop') {
+        gap: 70px;
+      }
+    }
   }
 
   &__logo {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
+  }
+}
+
+.footer__wrap {
+  @include media('desktop', max) {
+    margin-bottom: 60px;
+  }
+
+  @include min-max('tablet', 'desktop') {
+    flex-basis: 50%;
   }
 }
 
 .footer__wrap--from-above {
-  padding-top: 12px;
+  @include media('tablet') {
+    padding-top: 5px;
+  }
+
+  @include media('desktop') {
+    padding-top: 12px;
+  }
 }
 
 .footer__title {
@@ -52,17 +78,35 @@
 
 // Subscription form
 .footer__form {
-  @extend .footer__wrap--from-above;
-
-  margin-left: auto;
+  @include media('desktop') {
+    margin-left: auto;
+    padding-top: 12px;
+  }
 }
 .footer__inner {
-  display: flex;
+  @include media('desktop') {
+    display: flex;
+  }
+}
+.footer__label {
+  display: block;
+  margin-bottom: 20px;
+
+  @include media('tablet') {
+    margin-right: auto;
+    margin-left: auto;
+    width: 450px;
+  }
+
+  @include media('desktop') {
+    margin-right: 12px;
+    margin-bottom: 0;
+    width: 358px;
+  }
 }
 .footer__field-mail {
-  min-width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
   padding-left: 16px;
 
   color: rgba(255, 255, 255, 0.6);
