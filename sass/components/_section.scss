@@ -41,6 +41,14 @@
 }
 
 .section__items {
+  &--mob {
+    @include media('tablet', max) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $flexItemsLine;
+    }
+  }
   @include media('tablet') {
     display: flex;
     flex-wrap: wrap;

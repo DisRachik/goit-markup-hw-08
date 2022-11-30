@@ -1,5 +1,13 @@
 .customer-card {
-  flex-basis: calc((100% - (#{$flexItemsLine} * 5)) / 6);
+  flex-basis: calc((100% - #{$flexItemsLine}) / 2);
+
+  @include media('tablet') {
+    flex-basis: calc((100% - (#{$flexItemsLine} * 2)) / 3);
+  }
+
+  @include media('desktop') {
+    flex-basis: calc((100% - (#{$flexItemsLine} * 5)) / 6);
+  }
 }
 
 .customer-card__link {
