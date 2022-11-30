@@ -252,33 +252,56 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.section--narrow {
-  padding-bottom: 0;
+  outline: 1px solid blue;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .section--select {
   background-color: #f5f4fa;
 }
+@media only screen and (max-width: 1199px) {
+  .section--hidden {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .section--narrow {
+    padding-bottom: 0;
+  }
+}
 
 .section__title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.179;
   letter-spacing: 0.03em;
   text-align: center;
 }
-.section__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 30px;
+@media only screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
 }
 
 .socials-list {
@@ -400,9 +423,22 @@ body {
   padding-left: 24px;
 }
 
-.advantages-card {
-  -ms-flex-preferred-size: calc((100% - (30px * 3)) / 4);
-      flex-basis: calc((100% - (30px * 3)) / 4);
+@media only screen and (max-width: 767px) {
+  .advantages-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .advantages-card {
+    -ms-flex-preferred-size: calc((100% - (30px)) / 2);
+        flex-basis: calc((100% - (30px)) / 2);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .advantages-card {
+    -ms-flex-preferred-size: calc((100% - (30px * 3)) / 4);
+        flex-basis: calc((100% - (30px * 3)) / 4);
+  }
 }
 
 .advantages-card__wrap {
@@ -424,6 +460,11 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .advantages-card__title {
+    text-align: center;
+  }
 }
 
 .advantages-card__text {

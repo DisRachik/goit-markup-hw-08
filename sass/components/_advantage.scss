@@ -1,5 +1,17 @@
 .advantages-card {
-  flex-basis: calc((100% - (#{$flexItemsLine} * 3)) / 4);
+  &:not(:last-child) {
+    @include media('tablet', max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media('tablet') {
+    flex-basis: calc((100% - (#{$flexItemsLine})) / 2);
+  }
+
+  @include media('desktop') {
+    flex-basis: calc((100% - (#{$flexItemsLine} * 3)) / 4);
+  }
 }
 
 .advantages-card__wrap {
@@ -18,6 +30,10 @@
 
   @include fontProportions(14px, 1.14);
   text-transform: uppercase;
+
+  @include media('tablet', max) {
+    text-align: center;
+  }
 }
 .advantages-card__text {
   @include fontProportions(14px, 1.71);

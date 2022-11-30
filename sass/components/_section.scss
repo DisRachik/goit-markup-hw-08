@@ -1,30 +1,50 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
-  &--narrow {
-    padding-bottom: 0;
-  }
+  outline: 1px solid blue;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &--select {
     background-color: getColor('bg-secondary');
   }
+
+  &--hidden {
+    @include media('desktop', max) {
+      display: none;
+    }
+  }
+
+  @include media('desktop') {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--narrow {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  @include fontProportions(36px, 1.17);
+  @include fontProportions(28px, 1.179);
   text-align: center;
 
   &--hidden {
     @extend %visually-hidden;
   }
+
+  @include media('desktop') {
+    margin-bottom: 50px;
+
+    @include fontProportions(36px, 1.17);
+  }
 }
 
 .section__items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: $flexItemsLine;
+  @include media('tablet') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $flexItemsLine;
+  }
 }
