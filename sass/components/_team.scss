@@ -1,6 +1,10 @@
 .team-card {
-  flex-basis: calc((100% - (#{$flexItemsLine} * 3)) / 4);
-  padding-bottom: 30px;
+  &:not(:last-child) {
+    @include media('tablet', max) {
+      margin-bottom: 30px;
+    }
+  }
+  padding-bottom: 24px;
 
   text-align: center;
 
@@ -8,9 +12,20 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @include media('tablet') {
+    flex-basis: calc((100% - (#{$flexItemsLine})) / 2);
+  }
+
+  @include media('desktop') {
+    padding-bottom: 30px;
+
+    flex-basis: calc((100% - (#{$flexItemsLine} * 3)) / 4);
+  }
 }
 
 .team-card__foto {
+  display: block;
   margin-bottom: 30px;
 }
 

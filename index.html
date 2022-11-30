@@ -163,10 +163,9 @@
             <li class="work-card">
               <div class="work-card__wrap">
                 <img
+                  srcset="./images/work/box-1.jpg 1x, ./images/work/box-1@2x.jpg 2x"
                   src="./images/work/box-1.jpg"
                   alt="Робочий простір нашого співробітника"
-                  width="370"
-                  height="294"
                 />
                 <h3 class="work-card__title">Десктопні додатки</h3>
               </div>
@@ -175,10 +174,9 @@
             <li class="work-card">
               <div class="work-card__wrap">
                 <img
+                  srcset="./images/work/box-2.jpg 1x, ./images/work/box-2@2x.jpg 2x"
                   src="./images/work/box-2.jpg"
                   alt="Адаптація продукта для смартфону"
-                  width="370"
-                  height="294"
                 />
                 <h3 class="work-card__title">Мобільні додатки</h3>
               </div>
@@ -187,10 +185,9 @@
             <li class="work-card">
               <div class="work-card__wrap">
                 <img
+                  srcset="./images/work/box-3.jpg 1x, ./images/work/box-3@2x.jpg 2x"
                   src="./images/work/box-3.jpg"
                   alt="Зображення палітра кольорів на планшеті"
-                  width="370"
-                  height="294"
                 />
                 <h3 class="work-card__title">Дизайнерські рішення</h3>
               </div>
@@ -205,13 +202,27 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="section__items">
             <li class="team-card">
-              <img
-                class="team-card__foto"
-                src="./images/team/team-1.jpg"
-                alt="Фото Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture class="team-card__foto">
+                <source
+                  srcset="
+                    ./images/team/mobile/team-mobile-1.jpg    1x,
+                    ./images/team/mobile/team-mobile-1@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team-tablet-1.jpg    1x,
+                    ./images/team/tablet/team-tablet-1@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/team-1.jpg 1x, ./images/team/team-1@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/team/team-1.jpg" alt="Фото Игорь Демьяненко" />
+              </picture>
               <h3 class="team-card__name">Ігор Дем'яненко</h3>
               <p class="team-card__position" lang="en">Product Designer</p>
               <ul class="socials-list socials-list--narrow">
@@ -274,13 +285,27 @@
             </li>
 
             <li class="team-card">
-              <img
-                class="team-card__foto"
-                src="./images/team/team-2.jpg"
-                alt="Фото Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture class="team-card__foto">
+                <source
+                  srcset="
+                    ./images/team/mobile/team-mobile-2.jpg    1x,
+                    ./images/team/mobile/team-mobile-2@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team-tablet-2.jpg    1x,
+                    ./images/team/tablet/team-tablet-2@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/team-2.jpg 1x, ./images/team/team-2@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/team/team-2.jpg" alt="Фото Ольга Рєпіна" />
+              </picture>
               <h3 class="team-card__name">Ольга Рєпіна</h3>
               <p class="team-card__position" lang="en">Frontend Developer</p>
               <ul class="socials-list socials-list--narrow">
@@ -343,13 +368,27 @@
             </li>
 
             <li class="team-card">
-              <img
-                class="team-card__foto"
-                src="./images/team/team-3.jpg"
-                alt="Фото Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture class="team-card__foto">
+                <source
+                  srcset="
+                    ./images/team/mobile/team-mobile-3.jpg    1x,
+                    ./images/team/mobile/team-mobile-3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team-tablet-3.jpg    1x,
+                    ./images/team/tablet/team-tablet-3@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/team-3.jpg 1x, ./images/team/team-3@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/team/team-3.jpg" alt="Фото Микола Тарасов" />
+              </picture>
               <h3 class="team-card__name">Микола Тарасов</h3>
               <p class="team-card__position" lang="en">Marketing</p>
               <ul class="socials-list socials-list--narrow">
@@ -412,13 +451,27 @@
             </li>
 
             <li class="team-card">
-              <img
-                class="team-card__foto"
-                src="./images/team/team-4.jpg"
-                alt="Фото Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture class="team-card__foto">
+                <source
+                  srcset="
+                    ./images/team/mobile/team-mobile-4.jpg    1x,
+                    ./images/team/mobile/team-mobile-4@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team-tablet-4.jpg    1x,
+                    ./images/team/tablet/team-tablet-4@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/team-4.jpg 1x, ./images/team/team-4@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/team/team-4.jpg" alt="Фото Михайло Єрмаков" />
+              </picture>
               <h3 class="team-card__name">Михайло Єрмаков</h3>
               <p class="team-card__position" lang="en">UI Designer</p>
               <ul class="socials-list socials-list--narrow">
