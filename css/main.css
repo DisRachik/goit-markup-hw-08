@@ -20,6 +20,10 @@ a {
   text-decoration: none;
   color: currentColor;
 }
+a:visited {
+  text-decoration: none;
+  color: currentColor;
+}
 
 ul {
   padding-left: 0;
@@ -108,6 +112,10 @@ body {
   .container {
     width: 1200px;
   }
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 .header {
@@ -959,6 +967,8 @@ body {
 
 .modal {
   position: relative;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
   max-width: 528px;
   padding: 40px 39px 40px 41px;
   text-align: center;
