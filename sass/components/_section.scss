@@ -1,5 +1,4 @@
 .section {
-  outline: 1px solid blue;
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -45,14 +44,12 @@
     @include media('tablet', max) {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: $flexItemsLine;
     }
   }
   @include media('tablet') {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: $flexItemsLine;
   }
 }

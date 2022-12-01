@@ -14,7 +14,7 @@
   border-radius: 0px 0px 4px 4px;
 
   @include media('tablet') {
-    flex-basis: calc((100% - (#{$flexItemsLine})) / 2);
+    flex-basis: calc((100% - #{$flexItemsLine}) / 2);
   }
 
   @include media('desktop') {

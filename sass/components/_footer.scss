@@ -13,10 +13,9 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
-      @include media('desktop') {
-        gap: 70px;
-      }
+    }
+    @include media('desktop') {
+      gap: 70px;
     }
   }
 

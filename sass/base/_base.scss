@@ -11,8 +11,6 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 
-  outline: 1px solid tomato;
-
   @include media('phone') {
     width: 480px;
     margin-right: auto;

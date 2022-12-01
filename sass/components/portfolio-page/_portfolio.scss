@@ -1,9 +1,21 @@
 .portfolio-card {
-  flex-basis: calc((100% - (30px * 2)) / 3);
+  &:not(:last-child) {
+    @include media('tablet', max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media('tablet') {
+    flex-basis: calc((100% - #{$flexItemsLine}) / 2);
+  }
+
+  @include media('desktop') {
+    flex-basis: calc((100% - (#{$flexItemsLine} * 2)) / 3);
+  }
 }
 
 .portfolio-card__link {
-  display: inline-block;
+  display: block;
 
   @include animated(box-shadow);
 
