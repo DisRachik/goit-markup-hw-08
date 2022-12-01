@@ -947,6 +947,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   -webkit-transition-property: opacity, visibility;
   transition-property: opacity, visibility;
   -webkit-transition-duration: 250ms;
@@ -963,12 +964,21 @@ body {
   -webkit-transform: scale(0.5, 0.5);
           transform: scale(0.5, 0.5);
 }
+@media screen and (max-height: 615px) {
+  .backdrop {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
 
 .modal {
   position: relative;
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
-  max-width: 528px;
+  max-width: 450px;
   padding: 40px 39px 40px 41px;
   text-align: center;
   background-color: #ffffff;
@@ -981,12 +991,22 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media only screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
+}
 
 .modal__title {
   margin-bottom: 12px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
+}
+@media only screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .modal__close {
@@ -1106,10 +1126,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 21px;
-  padding-left: 17px;
+  padding-right: 15px;
   gap: 7px;
   margin-bottom: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .modal-form__consent {
+    padding-right: 21px;
+    padding-left: 17px;
+  }
 }
 
 .modal-form__check {
@@ -1141,10 +1166,17 @@ body {
 }
 
 .modal-form__text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media only screen and (min-width: 1200px) {
+  .modal-form__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form__link {
@@ -1168,6 +1200,7 @@ body {
   height: 100vh;
   font-weight: 500;
   background-color: #ffffff;
+  overflow-y: scroll;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition-property: -webkit-transform;
