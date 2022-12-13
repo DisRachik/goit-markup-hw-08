@@ -1440,6 +1440,14 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+@media only screen and (max-width: 479.98px) {
+  .mobile-menu__socials-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: -40px;
+  }
+}
 
 .mobile-menu__socials-item {
   padding-right: 10px;

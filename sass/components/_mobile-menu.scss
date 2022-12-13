@@ -102,6 +102,11 @@
 // Socials links in mobile menu
 .mobile-menu__socials-list {
   display: flex;
+
+  @include media('phone', max) {
+    justify-content: center;
+    margin-left: -40px;
+  }
 }
 
 .mobile-menu__socials-item {
@@ -111,10 +116,18 @@
     border-left: 1px solid rgba(33, 33, 33, 0.2);
     padding-left: 10px;
   }
+
+  // @include media('phone', max) {
+  //   padding-right: 0;
+  //   border-style: 0px;
+  // }
 }
 
 .mobile-menu__socials-link {
   @include fontProportions(18px, 1.22, 0.02em);
 
   color: getColor('accent');
+}
+
+@include media('phone', max) {
 }
